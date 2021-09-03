@@ -1,0 +1,15 @@
+<h2 class="screen-align">Createtypes</h2>
+<div id="template-ixio" class="row">
+    <div id="template-ibp3" class="cell">
+        <label id="template-iy2j" class="label">name</label>
+        <input id="template-iejf" placeholder="Enter Name" class="input form-control"
+        />
+        <button id="template-inij" (click)="GpCreate()" class="button btn btn-primary">Create</button>
+    </div>
+    <div id="template-ir1z" class="cell">
+        <label id="template-i2t4" class="label">description</label>
+        <input id="template-i1rx" placeholder="Enter Description"
+        [(ngModel)]="types.description" [ngModelOptions]="{standalone: true}" class="input form-control"
+        />
+    </div>
+</div>

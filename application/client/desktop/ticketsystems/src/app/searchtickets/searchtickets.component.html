@@ -1,0 +1,207 @@
+<h2 class="screen-align">Searchtickets</h2>
+<div id="template-ixx8" class="row">
+    <div id="template-imln" class="cell">
+        <label id="template-iykr" class="label">name</label>
+        <input id="template-ilckb" class="input form-control" />
+    </div>
+    <div id="template-iw0q" class="cell">
+        <label id="template-iws27" class="label">email</label>
+        <input id="template-i1k4l" class="input form-control" />
+    </div>
+    <div id="template-ipel" class="cell">
+        <label id="template-ibikz" class="label">description</label>
+        <input id="template-ikgxr" class="input form-control"
+        />
+    </div>
+</div>
+<div id="template-i0u1" class="row">
+    <div id="template-ihvq" class="cell">
+        <label id="template-i4t9i" class="label">types</label>
+        <div id="template-ibdoy" class="">
+            <div>
+                <select id="template-ikr88" class="form-control">
+                    <option *ngFor="let option of options" [ngValue]="option.key">{{option.value}}</option>
+                </select>
+            </div>
+        </div>
+        <button id="template-i7irv" class="button btn btn-primary">Search</button>
+    </div>
+    <div id="template-i87a" class="cell">
+        <label id="template-i7k0l" class="label">severity</label>
+        <div id="template-i252t" class="">
+            <div>
+                <select id="template-i1e16" class="form-control">
+                    <option *ngFor="let option of options" [ngValue]="option.key">{{option.value}}</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div id="template-i068" class="cell"></div>
+</div>
+<script id="template-ipwh7" class="">
+    var items = document.querySelectorAll('#template-iz39k');
+      for (var i = 0, len = items.length; i < len; i++) {
+        (function(){
+          var _this = this;
+          var gridOptions = JSON.parse('{"entityId":"5a128db0-0756-11ec-bc56-f5380fa5d371","default_field":[{"headerName":"A","field":"a","sortable":true,"colId":"col1_id","cellStyle":{"border":"1px solid"}},{"headerName":"B","field":"b","sortable":true,"colId":"col2_id","cellStyle":{"border":"1px solid"}},{"headerName":"C","field":"c","sortable":true,"colId":"col3_id","cellStyle":{"border":"1px solid"}},{"headerName":"D","field":"d","sortable":true,"colId":"col4_id","cellStyle":{"border":"1px solid"}},{"headerName":"E","field":"e","sortable":true,"colId":"col5_id","cellStyle":{"border":"1px solid"}}],"htmlId":"template-iz39k","componentId":"c149744","custom_field":[{"_id":"612920696f18cf00127babe0","columnid":"col1_id","columnname":"Name","entity":"Tickets","entityfield":"Name"},{"_id":"612920696f18cf00127babdf","columnid":"col2_id","columnname":"Email","entity":"Tickets","entityfield":"Email"},{"_id":"612920696f18cf00127babde","columnid":"col3_id","columnname":"Description","entity":"Tickets","entityfield":"Description"},{"_id":"612920696f18cf00127babdd","columnid":"col4_id","columnname":"Types","entity":"Tickets","entityfield":"Types"},{"_id":"612920696f18cf00127babdc","columnid":"col5_id","columnname":"Severity","entity":"Tickets","entityfield":"Severity"}],"event":""}');
+          var initAgGrid = function () {
+            var columnDefs = [];
+            var rowData = [];
+            if (gridOptions &&
+                gridOptions.custom_field &&
+                gridOptions.custom_field.length > 0) {
+              columnDefs = [];
+              for (var _i = 0, _a = gridOptions.custom_field; _i < _a.length; _i++) {
+                var key = _a[_i];
+                for (var i = 0; i < 10; i++) {
+                  var newObject = gridOptions.custom_field.reduce(function (o, objectKey) {
+                    var _a;
+                    return Object.assign(o, (_a = {
+                    }
+                                             , _a[objectKey.columnname] = "" + objectKey.columnname + Math.floor(Math.random() * 10000), _a));
+                  }
+                                                                  , {
+                  }
+                                                                 );
+                  rowData.push(newObject);
+                }
+                var temp = {
+                  headerName: '',
+                  field: '',
+                  sortable: true,
+                  colId: ''
+                };
+                temp.headerName = key.columnname;
+                temp.field = key.columnname;
+                temp.colId = key.columnid;
+                columnDefs.push(temp);
+              }
+            }
+            else {
+              columnDefs = [
+                {
+                  headerName: 'A',
+                  field: 'a',
+                  sortable: true,
+                  colId: 'col1_id',
+                  cellStyle: {
+                    border: '1px solid' }
+                }
+                ,
+                {
+                  headerName: 'B',
+                  field: 'b',
+                  sortable: true,
+                  colId: 'col2_id',
+                  cellStyle: {
+                    border: '1px solid' }
+                }
+                ,
+                {
+                  headerName: 'C',
+                  field: 'c',
+                  sortable: true,
+                  colId: 'col3_id',
+                  cellStyle: {
+                    border: '1px solid' }
+                }
+                ,
+                {
+                  headerName: 'D',
+                  field: 'd',
+                  sortable: true,
+                  colId: 'col4_id',
+                  cellStyle: {
+                    border: '1px solid' }
+                }
+                ,
+                {
+                  headerName: 'E',
+                  field: 'e',
+                  sortable: true,
+                  colId: 'col5_id',
+                  cellStyle: {
+                    border: '1px solid' }
+                }
+              ];
+              rowData = createRowData();
+            }
+            function createRowData() {
+              var tempData = [];
+              for (var i = 0; i < 10; i++) {
+                // create sample row item
+                var rowItem = {
+                  // is is simple
+                  a: 'aa' + Math.floor(Math.random() * 10000),
+                  b: 'bb' + Math.floor(Math.random() * 10000),
+                  c: 'cc' + Math.floor(Math.random() * 10000),
+                  d: 'dd' + Math.floor(Math.random() * 10000),
+                  e: 'ee' + Math.floor(Math.random() * 10000)
+                };
+                tempData.push(rowItem);
+              }
+              return tempData;
+            }
+            _this.gridOptions = {
+              defaultColDef: {
+                editable: true
+              }
+              ,
+              columnDefs: columnDefs,
+              rowData: rowData,
+              components: {
+                boldRenderer: function (params) {
+                  return '<b>' + params.value.name + '</b>';
+                }
+              }
+              ,
+              onGridReady: function (params) {
+                console.log('rendering params', params.api);
+                params.api.sizeColumnsToFit();
+                window.addEventListener('resize', function () {
+                  setTimeout(function () {
+                    params.api.sizeColumnsToFit();
+                  }
+                            );
+                }
+                                       );
+              }
+              ,
+              paginationPageSize: 5,
+              pagination: true,
+            };
+            var gridDiv = document.querySelector('#myGrid');
+            // tslint:disable-next-line:no-unused-expression
+            new agGrid.Grid(gridDiv, _this.gridOptions);
+            _this.gridOptions.cacheQuickFilter = false;
+            console.log('grid function api', _this.gridOptions.api);
+            _this.gridOptions.api.sizeColumnsToFit();
+          };
+          var exists = false;
+          var url = 'https://unpkg.com/ag-grid-community@20.0.0/dist/ag-grid-community.min.js';
+          var scripts = document.getElementsByTagName('script');
+          for (var i = scripts.length; i--;) {
+            if (scripts[i].src === url) {
+              exists = true;
+            }
+          }
+          if (exists) {
+            initAgGrid();
+          }
+          else {
+            var script = document.createElement('script');
+            script.onload = initAgGrid;
+            script.src = url;
+            document.body.appendChild(script);
+          }
+        }
+         .bind(items[i]))();
+      }
+</script>
+<div name="grid_template-iew8j" id="template-iew8j">
+    <ag-grid-angular #agGrid style="width: 100%; height: 100%;" id="myGrid"
+    class="ag-theme-balham" [columnDefs]="columnDefs" [pagination]="true" [paginationPageSize]="paginationPageSize"
+    [defaultColDef]="defaultColDef" [rowData]="rowData" [rowSelection]="rowSelection"
+    (gridReady)="onGridReady($event)" domLayout='autoHeight' (selectionChanged)="onSelectionChanged($event)"></ag-grid-angular>
+</div>
+<div id="myGrid" class=""></div>

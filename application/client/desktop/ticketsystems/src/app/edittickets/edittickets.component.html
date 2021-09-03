@@ -1,0 +1,39 @@
+<h2 class="screen-align">Edittickets</h2>
+<div id="template-ixll" class="row">
+    <div id="template-iovj" class="cell">
+        <label id="template-i32m" class="label">name</label>
+        <input id="template-ikvxl" class="input form-control" />
+    </div>
+    <div id="template-ilnh" class="cell">
+        <label id="template-iexxk" class="label">email</label>
+        <input id="template-i60yl" class="input form-control" />
+    </div>
+    <div id="template-i13j" class="cell">
+        <label id="template-ia2mh" class="label">description</label>
+        <input id="template-inocm" class="input form-control"
+        />
+    </div>
+</div>
+<div id="template-iiog" class="row">
+    <div id="template-imqt" class="cell">
+        <label id="template-iv2qq" class="label">types</label>
+        <div id="template-iyw25" class="">
+            <ng-select id="template-iq6q7" name="dynamicdropdown_template-iq6q7" [searchable]="true"
+            [virtualScroll]="true" [items]="typesitemArray" bindLabel="name" bindValue="name"
+            [(ngModel)]="tickets.types" [ngModelOptions]="{standalone: true}" class="form-control"></ng-select>
+        </div>
+        <div id="template-i44cs" class=""></div>
+        <button id="template-impbh" class="button btn btn-primary">Update</button>
+        <button id="template-iefdj" (click)="GpDelete()" class="button btn btn-primary">Delete</button>
+    </div>
+    <div id="template-iidf" class="cell">
+        <label id="template-ivgwd" class="label">severity</label>
+        <div id="template-ibium" class="">
+            <ng-select id="template-ii22y" name="dynamicdropdown_template-ii22y" [searchable]="true"
+            [virtualScroll]="true" [items]="severityitemArray" bindLabel="name" bindValue="name"
+            [(ngModel)]="tickets.severity" [ngModelOptions]="{standalone: true}" class="form-control"></ng-select>
+        </div>
+        <div id="template-ixwue" class=""></div>
+    </div>
+    <div id="template-ibqf" class="cell"></div>
+</div>

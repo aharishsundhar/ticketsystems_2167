@@ -1,0 +1,38 @@
+<h2 class="screen-align">Createtickets</h2>
+<div id="template-ijly" class="row">
+    <div id="template-ik0g" class="cell">
+        <label id="template-ikty" class="label">name</label>
+        <input id="template-i2l9u" class="input form-control" />
+    </div>
+    <div id="template-i5cr" class="cell">
+        <label id="template-ixu9e" class="label">email</label>
+        <input id="template-ivowg" class="input form-control" />
+    </div>
+    <div id="template-im53" class="cell">
+        <label id="template-ia34l" class="label">description</label>
+        <input id="template-i60tt" class="input form-control"
+        />
+    </div>
+</div>
+<div id="template-i0fk" class="row">
+    <div id="template-i5p8" class="cell">
+        <label id="template-i5ptq" class="label">Types</label>
+        <div id="template-i0x0f" class=""></div>
+        <div id="template-ii6yk" class="">
+            <ng-select id="template-ic3zp" name="dynamicdropdown_template-ic3zp" [searchable]="true"
+            [virtualScroll]="true" [items]="typesitemArray" bindLabel="name" bindValue="name"
+            [(ngModel)]="tickets.types" [ngModelOptions]="{standalone: true}" class="form-control"></ng-select>
+        </div>
+        <button id="template-irhr6" (click)="GpCreate()" class="button btn btn-primary">Create</button>
+    </div>
+    <div id="template-iouc" class="cell">
+        <label id="template-im773" class="label">severity</label>
+        <div id="template-ikzxm" class="">
+            <ng-select id="template-iqdz6" name="dynamicdropdown_template-iqdz6" [searchable]="true"
+            [virtualScroll]="true" [items]="severityitemArray" bindLabel="name" bindValue="name"
+            [(ngModel)]="tickets.severity" [ngModelOptions]="{standalone: true}" class="form-control"></ng-select>
+        </div>
+        <div id="template-is8vc" class=""></div>
+    </div>
+    <div id="template-idkr" class="cell"></div>
+</div>

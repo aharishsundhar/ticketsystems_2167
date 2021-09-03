@@ -1,0 +1,73 @@
+}}
+
+.row {
+    display: table;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    width: 100%;
+}
+
+.cell {
+    width: 8%;
+    display: table-cell;
+    height: 75px;
+}
+
+.template-iwin {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+}
+
+.template-iaim {
+    width: 450px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+.template-i6uz {
+    width: 450px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+.label {
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    text-transform: capitalize;
+    padding-top: 2.8px;
+    padding-right: 8.4px;
+    padding-bottom: 4.2px;
+    padding-left: 3px;
+}
+
+.input.form-control {
+    margin-top: 4px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+}
+
+.button.btn.btn-primary {
+    margin-top: 28px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    padding-top: 6px;
+    padding-right: 22px;
+    padding-bottom: 6px;
+    padding-left: 22px;
+    background-color: rgb(34, 66, 148);
+}
+
+.cell {
+    width: 100%;
+    display: block;
+}
